@@ -1426,7 +1426,7 @@ var Select$1 = function (_React$Component) {
 		key: 'expandValue',
 		value: function expandValue(value, props) {
 			var valueType = typeof value === 'undefined' ? 'undefined' : _typeof(value);
-			if (valueType !== 'string' && valueType !== 'number' && valueType !== 'boolean') return value;
+			if (valueType !== 'string' && valueType !== 'number' && valueType !== 'boolean' && !Array.isArray(value)) return value;
 			var labelKey = props.labelKey,
 			    renderInvalidValues = props.renderInvalidValues,
 			    valueKey = props.valueKey;

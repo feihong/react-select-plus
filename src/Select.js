@@ -613,7 +613,7 @@ class Select extends React.Component {
 	 */
 	expandValue (value, props) {
 		const valueType = typeof value;
-		if (valueType !== 'string' && valueType !== 'number' && valueType !== 'boolean') return value;
+		if (valueType !== 'string' && valueType !== 'number' && valueType !== 'boolean' && !Array.isArray(value)) return value;
 		let { labelKey, renderInvalidValues, valueKey } = props;
 		let options = this._flatOptions;
     if (!options) return;
